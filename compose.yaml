@@ -5,6 +5,8 @@ services:
   reverse-proxy:
     image: traefik:v3.1
     command:
+      - "--accesslog=true" # active les logs d'acces
+      - "--log.level=INFO" # augmente le niveau des logs (default=ERROR)
       - "--api.insecure=false" # si true, autorise le tableau de bord Traefik 
       - "--providers.docker=true" # permet l'interconnexion avec Docker
       - "--entrypoints.web.address=:80"
