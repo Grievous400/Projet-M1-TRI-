@@ -47,8 +47,10 @@ services:
       WORDPRESS_DB_PASSWORD: your_password2
       WORDPRESS_DB_NAME: wordpress2
     labels:
-      - "traefik.http.routers.wordpress2.rule=Host(`scem-eset.usmb-tri.fr`)"
-      - "traefik.http.services.wordpress2.loadbalancer.server.port=80"
+      - "traefik.http.routers.wordpress1.rule=Host(`durand-tri.usmb-tri.fr`)"
+      - "traefik.http.services.wordpress1.loadbalancer.server.port=80"
+      - "traefik.http.routers.wordpress1.entrypoints=web,websecure"
+      - "traefik.http.routers.wordpress1.tls.certresolver=myresolver"
 
   reverse-proxy:
     # The official v3 Traefik docker image
