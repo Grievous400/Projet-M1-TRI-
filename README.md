@@ -40,7 +40,7 @@ Traefik est un reverse proxy qui gère automatiquement :
 - La gestion des certificats SSL/TLS pour sécuriser les connexions HTTPS grâce à Let's Encrypt.
 
 Dans ce projet, Traefik est configuré pour :
-- Écouter sur les ports 80 (HTTP) et 443 (HTTPS).
+- Écouter sur les ports 80 (HTTP) et 443 (HTTPS). Si le port 443 est fermé, on n'obtient pas de certificat Let's Encrypt. 
 - Gérer deux domaines distincts : `claudel-tri.usmb-tri.fr` et `durand-tri.usmb-tri.f`.
 - Obtenir automatiquement des certificats SSL/TLS via Let's Encrypt.
 
