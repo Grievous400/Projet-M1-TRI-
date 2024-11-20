@@ -32,27 +32,32 @@ Le service `db` utilise l'image officielle de MySQL (version 8.0). Il est config
 
 Les deux services WordPress attendent que la base de données MySQL soit prête grâce à la configuration `WAIT_HOSTS`.
 
-### 3. Reverse Proxy (Traefik)
-Le reverse proxy gère :
-- Le routage HTTP/HTTPS pour les deux instances WordPress.
-- Les certificats SSL via Let's Encrypt (en mode `staging` pour éviter les limites de production lors des tests).
+## 3.Configuration de Traefik et des Certificats HTTPS
 
-Commandes importantes :
-- **`--api.insecure=true`** : Active l'interface d'administration de Traefik sur le port `8085`.
-- **`--certificatesresolvers.myresolver.acme.*`** : Configure Let's Encrypt pour la génération et la gestion automatique des certificats.
+### Fonctionnement de Traefik
+Traefik est un reverse proxy qui gère automatiquement :
+- Le routage des requêtes vers les services (par exemple, WordPress).
+- La gestion des certificats SSL/TLS pour sécuriser les connexions HTTPS grâce à Let's Encrypt.
+
+Dans ce projet, Traefik est configuré pour :
+- Écouter sur les ports 80 (HTTP) et 443 (HTTPS).
+- Gérer deux domaines distincts : `claudel-tri.usmb-tri.fr` et `durand-tri.usmb-tri.f`.
+- Obtenir automatiquement des certificats SSL/TLS via Let's Encrypt.
+
+### Configuration des Certificats SSL/TLS
+#### Résolveur de Certificat
+Le résolveur `myresolver` est utilisé pour obtenir les certificats auprès de Let's Encrypt. Il est configuré dans les options suivantes :
+- **`tlschallenge=true`** : Utilise le challenge TLS-ALPN pour valider les domaines.
+- **`email`** : Adresse e-mail utilisée pour enregistrer les certificats.
+- **`storage`** : Les certificats et clés sont stockés dans le fichier `acme.json`, situé dans le dossier `letsencrypt`.
+
+#### Mode de Test (Staging)
+Pour éviter de dépasser les limites de requêtes de Let's Encrypt pendant les tests, le serveur de staging est utilisé :
+
+**`--certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory`**
 
 ### Volumes
 - `db_data` : Stockage persistant des données MySQL.
 - `./letsencrypt` : Stockage des certificats Let's Encrypt.
 - `/var/run/docker.sock` : Permet à Traefik de surveiller les événements Docker.
 
-## Utilisation
-
-### Pré-requis
-- **Docker** et **Docker Compose** installés sur votre machine.
-- Les domaines configurés dans un DNS pointant vers l'adresse IP de votre serveur.
-
-### Commandes
-1. **Démarrer les services** :
-   ```bash
-   docker-compose up -d
