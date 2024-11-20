@@ -3,18 +3,22 @@
 name: projet_web_univ
 services:
   reverse-proxy:
-    image: traefik:v3.1
+    image: traefik
     command:
-      - "--accesslog=true" # active les logs d'acces
-      - "--log.level=INFO" # augmente le niveau des logs (default=ERROR)
-      - "--api.insecure=false" # si true, autorise le tableau de bord Traefik 
-      - "--providers.docker=true" # permet l'interconnexion avec Docker
-      - "--entrypoints.web.address=:80"
-      # - "--entrypoints.websecure.address=:443"
+      - --accesslog=true # permet l'affichage des logs
+      - --log.level=INFO # affiche les logs au niveau INFO (par défaut, ERROR)
+      - --providers.docker=true # permet de directement se connecter au conteneur docker
+      - --entrypoints.web.address=:80 # autorise l'accès avec le port 80 http
+      - --entrypoints.websecure.address=:443 # autorise l'accès avec le port 443 https
+      - --certificatesresolvers.myresolver.acme.tlschallenge=true
+      - --certificatesresolvers.myresolver.acme.email=thomas.durand@etu.univ-smb.fr
+      - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
+      - --certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
     ports:
-      - "80:80"
-      # - "8080:8080" # pour accéder au dashboard Traefik
+      - 80:80 # important pour que letsencrypt puisse valider et envoyer le certificat
+      - 443:443
     volumes:
+      - ./letsencrypt:/letsencrypt
       - "/var/run/docker.sock:/var/run/docker.sock" # important pour que Traefik communique avec Docker
     networks:
       - web
@@ -22,61 +26,48 @@ services:
       - "traefik.enable=true"
 
   db:
-    image: mysql:8.0
+    image: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpresspassword
+      MYSQL_ROOT_PASSWORD: rootpassword # permet son accès en mode root sans savoir les utilisateurs présent dans la db
     volumes:
-      - db_data:/var/lib/mysql
+      - ./sql:/var/lib/mysql
+      - ./web-tri.sql:/docker-entrypoint-initdb.d/dump.sql:ro # définit le dump sql de la db pour qu'elle soit importer au lancement
     networks:
       - web
     expose:
-      - "3306"
+      - 3306
 
   wordpress1:
-    image: wordpress:latest
+    image: wordpress:5.8.3
     restart: always
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpresspassword
-      WORDPRESS_DB_NAME: wordpress
     depends_on:
       - db
     volumes:
-      - wordpress1_data:/var/www/html
+      - ./wordpress_tri:/var/www/html
     networks:
       - web
     labels:
-      - "traefik.http.routers.wordpress1.rule=Host(`durand-eset.usmb-tri.fr`)"
-      - "traefik.http.services.wordpress1.loadbalancer.server.url=http://wordpress1"
+      - "traefik.http.routers.wordpress1.rule=Host(`durand-tri.usmb-tri.fr`)" # définit quelle URL sera utilisée pour matcher avec le reste des règles
+      - "traefik.http.routers.wordpress1.entrypoints=web,websecure" # autorise le port 80 et 443
+      - "traefik.http.routers.wordpress1.tls.certresolver=myresolver" # définit le certificat utilisé (produit avant par letsencrypt)
+      - "traefik.http.services.wordpress1.loadbalancer.server.url=http://wordpress1" # renvoi sur le site herbergé sur wordpress1
 
   wordpress2:
-    image: wordpress:latest
+    image: wordpress:5.8.3
     restart: always
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpresspassword
-      WORDPRESS_DB_NAME: wordpress
     depends_on:
-      - wordpress1
+      - db
     volumes:
-      - wordpress2_data:/var/www/html
+      - ./wordpress_eset:/var/www/html
     networks:
       - web
     labels:
-      - "traefik.http.routers.wordpress2.rule=Host(`durand-tri.usmb-tri.fr`)"
-      - "traefik.http.services.wordpress2.loadbalancer.server.url=http://wordpress2"
+      - "traefik.http.routers.wordpress2.rule=Host(`durand-eset.usmb-tri.fr`)" # définit quelle URL sera utilisée pour matcher avec le reste des règles
+      - "traefik.http.routers.wordpress2.entrypoints=web,websecure" # autorise le port 80 et 443
+      - "traefik.http.routers.wordpress2.tls.certresolver=myresolver" # définit le certificat utilisé (produit avant par letsencrypt)
+      - "traefik.http.services.wordpress2.loadbalancer.server.url=http://wordpress2" # renvoi sur le site herbergé sur wordpress2
 
 networks:
   web:
     driver: bridge
-
-volumes:
-  db_data:
-  wordpress1_data:
-  wordpress2_data:
