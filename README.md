@@ -40,9 +40,13 @@ Mail envoyé au professeur pour expliquer le problème. Bascule sur l'apprentiss
 ### *15/11/2024*
 Mail envoyé au professeur pour savoir les versions utilisées car j'ai une erreur PHP avec la dernière version de Wordpress (PHP v8).
 
+Utilisation du code fourni par Louis pour avoir un certificat généré par LetsEncrypt.
+
 Réponse du professeur, version utilisé sur le serveur web (WP : 5.8.6 / PHP : 7.4.33).
 
-Utilisation du code fourni par Louis pour avoir un certificat généré par LetsEncrypt.
+Problème est qu'il n'existe pas d'image Wordpress concernant la version 5.8.6.
+
+On retrouve les images WordPress avec comme version 5.8.3 puis 5.9. J'utiliserai donc la 5.8.3 (PHPv5.4.27) qui se rapproche le plus du cas d'utilisation du serveur (PHPv5.4.33).
 
 ### *14/11/2024*
 Pendant l'investigation sur les erreurs en cours, j'en apprends plus sur Docker, Wordpress et la base de données.
