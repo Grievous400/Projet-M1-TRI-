@@ -18,11 +18,6 @@ Le service `db` utilise l'image officielle de MySQL (version 8.0). Il est config
 - Deux volumes :
   - `db_data` : Stocke les données persistantes de la base.
   - `init.sql` : Script d'initialisation pour la base de données, copié automatiquement lors du démarrage. Ce scripts crée deux base de donnée et deux utilisateurs admins sur ces bases. Les bases et les utilisateurs sont utilisé par les dockers wordpress. 
-
-  **Expliquer le rôle des commandes et paramètres suivants**
-  
-  La première commande sert à créer une database wordpress s'elle n'existe pas dans notre système de base de donnée.
-  La deuxième crée un utilisateur your_user qui a un accès total à la base wordpress et peut s'y connecter de partout.
   
 -- Création de la première base de données et utilisateur
 ```
@@ -30,7 +25,9 @@ CREATE DATABASE IF NOT EXISTS wordpress;
 CREATE USER 'your_user'@'%' IDENTIFIED BY 'your_password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'your_user'@'%';
 ```
-
+ La première commande sert à créer une database wordpress s'elle n'existe pas dans notre système de base de donnée.
+ La deuxième crée un utilisateur your_user qui a un accès total à la base wordpress et peut s'y connecter de partout.
+  
 ```
 
 ### 2. Instances WordPress
@@ -70,6 +67,14 @@ Configure le résolveur myresolver pour obtenir un certificat HTTPS via Let's En
 **Mettre une version du fichier docker-compose.yml sans certificat Let's Encryp et une avec certificat let's encrypt.**
 
 **Donner à chaque fois des commandes de tests et les résultats obtenus.**
+
+
+
+**On peut vérifier la présence de nos certificats de la manière suivante**
+Pour voir si nos certificats sont bien généré, on peut aller voir les certificats directement depuis notre navigateurs avec l'adresse en https https://claudel-tri.usmb-tri.fr/ 
+
+Dans notre cas, le certificat apparait non valide car il n'est pas signé. Cela vient du fait qu'on utilise le staging server. Nous pouvons voir les différents éléments de notre certificat.
+![image](https://github.com/user-attachments/assets/22aed5f8-97ea-4bcd-8664-44e95cf1ab9f)
 
 ## 3.Configuration de Traefik et des Certificats HTTPS
 
