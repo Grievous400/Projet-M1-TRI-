@@ -25,6 +25,3 @@ Pour pouvoir utiliser le docker compose avec une sauvegarde d'un site web, il fa
 |./wordpress/wp-config.php|Remplacement valeur *DB_PASSWORD* par *rootpassword*|
 |./wordpress/wp-config.php|Remplacement valeur *DB_HOST* par *db:3306*|
 |./wordpress/wp-config.php|Remplacement valeur *WP_DEBUG* par *true*|
-
-## Historique
-https://github.com/Grievous400/Projet-M1-TRI/blob/thomas/wordpress_univ/history_thomas.md
