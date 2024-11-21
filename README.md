@@ -92,6 +92,9 @@ Le résolveur `myresolver` est utilisé pour obtenir les certificats auprès de 
 
 **Tout est dans un seul fichier ??? Donner sa structure et expliquer rapidement son contenu**
 
+Le contenu du fichier acme.json est les informations sur notre resolvers, la clé privé et les certificats chacun suivis de sa clé publique.  
+
+
 #### Mode de Test (Staging)
 Pour éviter de dépasser les limites de requêtes de Let's Encrypt pendant les tests, le serveur de staging est utilisé :
 
