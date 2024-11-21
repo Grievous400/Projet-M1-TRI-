@@ -71,6 +71,7 @@ Configure le résolveur myresolver pour obtenir un certificat HTTPS via Let's En
 
 
 **On peut vérifier la présence de nos certificats de la manière suivante**
+
 Pour voir si nos certificats sont bien généré, on peut aller voir les certificats directement depuis notre navigateurs avec l'adresse en https https://claudel-tri.usmb-tri.fr/ 
 
 Dans notre cas, le certificat apparait non valide car il n'est pas signé. Cela vient du fait qu'on utilise le staging server. Nous pouvons voir les différents éléments de notre certificat.
@@ -97,7 +98,7 @@ Le résolveur `myresolver` est utilisé pour obtenir les certificats auprès de 
 
 **Tout est dans un seul fichier ??? Donner sa structure et expliquer rapidement son contenu**
 
-Le contenu du fichier acme.json est les informations sur notre resolvers, la clé privé et les certificats chacun suivis de sa clé publique.  
+Le contenu du fichier acme.json est composé des informations sur notre resolveur, la clé privé et les certificats chacun suivis de sa clé publique.  
 
 
 #### Mode de Test (Staging)
