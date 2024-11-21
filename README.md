@@ -44,7 +44,7 @@ Les deux services WordPress attendent que la base de données MySQL soit prête 
 
 ```
 labels:
-      - "traefik.http.routers.wordpress1.rule=Host(\`claudel-tri.usmb-tri.fr\`)"
+      - "traefik.http.routers.wordpress1.rule=Host('claudel-tri.usmb-tri.fr')"
       - "traefik.http.services.wordpress1.loadbalancer.server.port=80"
       - "traefik.http.routers.wordpress1.entrypoints=web,websecure"
       - "traefik.http.routers.wordpress1.tls.certresolver=myresolver"
