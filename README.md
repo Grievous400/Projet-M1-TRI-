@@ -17,7 +17,7 @@ Le service `db` utilise l'image officielle de MySQL (version 8.0). Il est config
 - Un mot de passe root spécifié via la variable d'environnement `MYSQL_ROOT_PASSWORD`. ***Mettre les variables d'environnement dans un fichier à part .venv***
 - Deux volumes :
   - `db_data` : Stocke les données persistantes de la base.
-  - `init.sql` : Script d'initialisation pour la base de données, copié automatiquement lors du démarrage. **Dire à quoi sert le script ici.**
+  - `init.sql` : Script d'initialisation pour la base de données, copié automatiquement lors du démarrage. Ce scripts crée deux base de donnée et deux utilisateurs admins sur ces bases. Les bases et les utilisateurs sont utilisé par les dockers wordpress. 
 
   **Expliquer le rôle des commandes et paramètres suivants**
   
