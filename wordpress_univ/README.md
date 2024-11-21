@@ -19,13 +19,14 @@ Pour pouvoir utiliser le docker compose avec une sauvegarde d'un site web, il fa
 
 |**Fichiers**|*Modifications*|
 |-----:|:-----|
-|*./backup.sql*|Remplacement valeur *user_pass* et *user_activationkey* par ' ' dans wp_users|
-|*./backup.sql*|Remplacement *scem-tri.univ-smb* par *durand-tri.usmb-tri* dans wp_options, wp_postmeta, wp_posts et wp_yoast|
-|*./wordpress/.htaccess*|Remplacement de */var/www/tri/public_html/wp-content/uploads* par */var/www/uploads*|
-|*./wordpress/wp-config.php*|Remplacement valeur *DB_USER* par *${DB_USER}*|
-|*./wordpress/wp-config.php*|Remplacement valeur *DB_PASSWORD* par *${DB_PASSWORD}*|
-|*./wordpress/wp-config.php*|Remplacement valeur *DB_HOST* par *db:3306*|
-|*./wordpress/wp-config.php*|Remplacement valeur *WP_DEBUG* par *true*|
+|*./backup.sql*|Remplacement valeur **user_pass** et **user_activationkey** par **' '** dans **wp_users**|
+|*./backup.sql*|Remplacement de **/var/www/tri/public_html/wp-content/uploads** par **/var/www/wp-content/uploads**|
+|*./backup.sql*|Remplacement **scem-tri.univ-smb** par **durand-tri.usmb-tri** dans **wp_options**, **wp_postmeta**, **wp_posts** et **wp_yoast**|
+|*./wordpress/.htaccess*|Remplacement de **/var/www/tri/public_html/wp-content/uploads** par **/var/www/wp-content/uploads**|
+|*./wordpress/wp-config.php*|Remplacement valeur **DB_USER** par **${DB_USER}**|
+|*./wordpress/wp-config.php*|Remplacement valeur **DB_PASSWORD** par **${DB_PASSWORD}**|
+|*./wordpress/wp-config.php*|Remplacement valeur **DB_HOST** par **db:3306**|
+|*./wordpress/wp-config.php*|Remplacement valeur **WP_DEBUG** par **true**|
 
 ## Testing
 
