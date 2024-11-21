@@ -20,7 +20,8 @@ Le service `db` utilise l'image officielle de MySQL (version 8.0). Il est config
   - `init.sql` : Script d'initialisation pour la base de données, copié automatiquement lors du démarrage. **Dire à quoi sert le script ici.**
 
   **Expliquer le rôle des commandes et paramètres suivants**
-  
+  La première commande sert à créer une database wordpress s'elle n'existe pas dans notre système de base de donnée.
+  La deuxième crée un utilisateur your_user qui a un accès total à la base wordpress et peut s'y connecter de partout.
 -- Création de la première base de données et utilisateur
 ```
 CREATE DATABASE IF NOT EXISTS wordpress;
@@ -51,7 +52,7 @@ labels:
       - "traefik.http.services.wordpress1.loadbalancer.server.port=80"
       - "traefik.http.routers.wordpress1.entrypoints=web,websecure"
       - "traefik.http.routers.wordpress1.tls.certresolver=myresolver"
-```
+
 traefik.http.routers.wordpress1.rule=Host('claudel-tri.usmb-tri.fr') 
 Spécifie que le service wordpress1 répond aux requêtes pour le domaine claudel-tri.usmb-tri.fr.
 
@@ -95,6 +96,8 @@ Pour éviter de dépasser les limites de requêtes de Let's Encrypt pendant les 
 **`--certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory`**
 
 **Quel est le nombre de requêtes max ??? Est-ce que l'utilisation de staging est ok en prod ?** 
+Il ne faut pas utiliser l'adresse du serveur de staging en production car ce sont des certificats non-signé. Pour une infrasturcture de production, il faut utiliser cette adresse : https://acme-v02.api.letsencrypt.org/directory
+Le nombre de requêtes max dépend du type de certificat. Dans notre cas, nous sommes limité à demander 5 certificats par semaines
 
 ### Volumes
 - `db_data` : Stockage persistant des données MySQL.
