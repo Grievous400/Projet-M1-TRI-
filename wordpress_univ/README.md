@@ -9,9 +9,9 @@
 
 |**Commandes**|*Actions*|
 |-----:|:-----|
-|***docker compose up -d***|pour lancer le compose|
-|***docker compose down -v***|pour arrêter le compose|
-|***docker compose logs -f***|pour suivre les logs du compose|
+|**docker compose up -d**|pour lancer le compose|
+|**docker compose down -v**|pour arrêter le compose|
+|**docker compose logs -f**|pour suivre les logs du compose|
 
 ## Actions à faire
 
@@ -30,16 +30,16 @@ Pour pouvoir utiliser le docker compose avec une sauvegarde d'un site web, il fa
 
 ## Testing
 
-*1* - Création d'un dossier de travail et puis à l'intérieur, création des dossiers **sql** et **wordpress**
+*1* - Création d'un dossier de travail et puis à l'intérieur, création des dossiers ***sql*** et ***wordpress***
 
-*2* - Importer le fichier **compose.yaml** dans la version souhaitée (http ou https) et le fichier **.env** contenant les variables d'environnement dans le dossier de travail
+*2* - Importer le fichier ***compose.yaml*** dans la version souhaitée (http ou https) et le fichier ***.env*** contenant les variables d'environnement dans le dossier de travail
 
 *3* - Faire les modifications dans les différents fichiers définis dans la partie précédente (**Actions à faire**)
 
-*4* - Importer dans le dossier **sql** le fichier **backup.sql**, puis dans le dossier **wordpress**, les fichier **.htaccess**, **wp-config.php** et enfin le dossier **/wp-content** 
+*4* - Importer dans le dossier ***sql*** le fichier ***backup.sql***, puis dans le dossier ***wordpress***, les fichier ***.htaccess***, ***wp-config.php*** et enfin le dossier ***/wp-content*** 
 
-*5* - Lancer le docker compose avec la commande : ***docker compose up -d***
+*5* - Lancer le docker compose avec la commande : **docker compose up -d**
 
-*5 bis* - Par moment, le site se lance avant la base de données malgré la dépendance dans le docker compose donc faire les commandes suivantes : ***docker compose down && docker compose up -d***
+*5 bis* - Par moment, le site se lance avant la base de données malgré la dépendance dans le docker compose donc faire les commandes suivantes : **docker compose down && docker compose up -d**
 
-*6* - Faire une commande curl sur le wordpress 1 par exemple : ***curl ${WORDPRESS1_HOST}***
+*6* - Faire une commande curl sur le wordpress 1 par exemple : **curl ${WORDPRESS1_HOST}**
