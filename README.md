@@ -5,7 +5,7 @@ Ce projet permet de déployer deux sites WordPress avec une base de données MyS
 
 ## Contenu du Projet
 
-Le fichier `docker.yml` contient la configuration suivante :
+Le fichier `docker.yml` contient la configuration suivante : ==changer le nom du fichier --> docker-compose.yml==
 - **MySQL** : Une base de données utilisée par les deux instances WordPress.
 - **WordPress** : Deux sites WordPress configurés pour utiliser des bases de données distinctes.
 - **Traefik** : Un reverse proxy pour gérer le routage et les certificats SSL.
@@ -14,7 +14,7 @@ Le fichier `docker.yml` contient la configuration suivante :
 
 ### 1. Base de Données (MySQL)
 Le service `db` utilise l'image officielle de MySQL (version 8.0). Il est configuré avec :
-- Un mot de passe root spécifié via la variable d'environnement `MYSQL_ROOT_PASSWORD`.
+- Un mot de passe root spécifié via la variable d'environnement `MYSQL_ROOT_PASSWORD`. ==Mettre les variables d'environnement dans un fichier à part .venv==
 - Deux volumes :
   - `db_data` : Stocke les données persistantes de la base.
   - `init.sql` : Script d'initialisation pour la base de données, copié automatiquement lors du démarrage.
