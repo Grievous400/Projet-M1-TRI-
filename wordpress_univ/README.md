@@ -4,7 +4,8 @@
 
 |**Fichiers**|*Fonctionnalités*|
 |-----:|:-----|
-|compose.yaml|Docker Compose pour le Reverse Proxy, DB & Wordpress|
+|compose_http.yaml|Docker Compose pour le Reverse Proxy, DB & Wordpress (Version HTTP:80)|
+|compose_https.yaml|Docker Compose pour le Reverse Proxy, LetsEncrypt, DB & Wordpress (Version HTTP:80 et HTTPS:443)|
 
 |**Commandes**|*Actions*|
 |-----:|:-----|
