@@ -5,7 +5,7 @@ Ce projet permet de déployer deux sites WordPress avec une base de données MyS
 
 ## Contenu du Projet
 
-Le fichier `docker.yml` contient la configuration suivante : ***changer le nom du fichier docker-compose.yml***
+Le fichier `docker-compose.yml` contient la configuration suivante : 
 - **MySQL** : Une base de données utilisée par les deux instances WordPress.
 - **WordPress** : Deux sites WordPress configurés pour utiliser des bases de données distinctes.
 - **Traefik** : Un reverse proxy pour gérer le routage et les certificats SSL.
@@ -20,12 +20,14 @@ Le service `db` utilise l'image officielle de MySQL (version 8.0). Il est config
   - `init.sql` : Script d'initialisation pour la base de données, copié automatiquement lors du démarrage. **Dire à quoi sert le script ici.**
 
   **Expliquer le rôle des commandes et paramètres suivants**
-  ```
-  -- Création de la première base de données et utilisateur
+  
+-- Création de la première base de données et utilisateur
 ```
 CREATE DATABASE IF NOT EXISTS wordpress;
 CREATE USER 'your_user'@'%' IDENTIFIED BY 'your_password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'your_user'@'%';
+```
+
 ```
 
 ### 2. Instances WordPress
@@ -50,6 +52,17 @@ labels:
       - "traefik.http.routers.wordpress1.entrypoints=web,websecure"
       - "traefik.http.routers.wordpress1.tls.certresolver=myresolver"
 ```
+traefik.http.routers.wordpress1.rule=Host('claudel-tri.usmb-tri.fr') 
+Spécifie que le service wordpress1 répond aux requêtes pour le domaine claudel-tri.usmb-tri.fr.
+
+traefik.http.services.wordpress1.loadbalancer.server.port=80 
+Indique que Traefik doit rediriger le trafic vers le port interne 80 du conteneur.
+
+traefik.http.routers.wordpress1.entrypoints=web,websecure 
+Active l'accès au service via HTTP (port 80) et HTTPS (port 443).
+
+traefik.http.routers.wordpress1.tls.certresolver=myresolver :
+Configure le résolveur myresolver pour obtenir un certificat HTTPS via Let's Encrypt.
 
 **Mettre une version du fichier docker-compose.yml sans certificat Let's Encryp et une avec certificat let's encrypt.**
 
