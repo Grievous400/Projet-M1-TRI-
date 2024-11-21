@@ -22,6 +22,7 @@ Le service `db` utilise l'image officielle de MySQL (version 8.0). Il est config
   **Expliquer le rôle des commandes et paramètres suivants**
   ```
   -- Création de la première base de données et utilisateur
+```
 CREATE DATABASE IF NOT EXISTS wordpress;
 CREATE USER 'your_user'@'%' IDENTIFIED BY 'your_password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'your_user'@'%';
