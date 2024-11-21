@@ -41,13 +41,15 @@ GRANT ALL PRIVILEGES ON wordpress.* TO 'your_user'@'%';
 Les deux services WordPress attendent que la base de données MySQL soit prête grâce à la configuration `WAIT_HOSTS`.
 
 **Expliquer précisément le rôle des lignes** 
+
 ```
 labels:
-      - "traefik.http.routers.wordpress1.rule=Host(`claudel-tri.usmb-tri.fr`)"
+      - "traefik.http.routers.wordpress1.rule=Host(\`claudel-tri.usmb-tri.fr\`)"
       - "traefik.http.services.wordpress1.loadbalancer.server.port=80"
       - "traefik.http.routers.wordpress1.entrypoints=web,websecure"
       - "traefik.http.routers.wordpress1.tls.certresolver=myresolver"
 ```
+
 **Mettre une version du fichier docker-compose.yml sans certificat Let's Encryp et une avec certificat let's encrypt.**
 
 **Donner à chaque fois des commandes de tests et les résultats obtenus.**
