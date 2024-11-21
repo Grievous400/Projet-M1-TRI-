@@ -1,2 +1,2 @@
-# ignore dans le commit les variables d'environnement
+# ignore dans le commit le fichier contenant les variables d'environnement
 .env
