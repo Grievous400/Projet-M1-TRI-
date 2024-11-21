@@ -1,5 +1,14 @@
 ## Historique
 
+### *21/11/2024*
+Commencement du cours sur le LoRaWaN et modifications des dockers compose.
+
+Ajout des versions http et https pour pouvoir utiliser le site sur port 80 et 443 si besoin.
+
+Modification du github avec l'ajout d'un dossier wordpress_univ pour mettre les dockers compose dedans.
+
+Modification des dockers compose avec l'ajout d'un fichier de variable d'environnement .env pour éviter que les mots de passe ne soit divulgés sur le github.
+
 ### *20/11/2024*
 Essais avec différentes versions de Wordpress (version 5.8.3 puis 5.8 et 5.4). Toujours en erreur concernant un module PHP et le plugin fusion-builder.
 
