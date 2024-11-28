@@ -14,7 +14,7 @@ Le fichier `docker-compose.yml` contient la configuration suivante :
 
 ### 1. Base de Données (MySQL)
 Le service `db` utilise l'image officielle de MySQL (version 8.0). Il est configuré avec :
-- Un mot de passe root spécifié via la variable d'environnement `MYSQL_ROOT_PASSWORD`. ***Mettre les variables d'environnement dans un fichier à part .venv***
+- Un mot de passe root spécifié via la variable d'environnement `MYSQL_ROOT_PASSWORD`.
 - Deux volumes :
   - `db_data` : Stocke les données persistantes de la base.
   - `init.sql` : Script d'initialisation pour la base de données, copié automatiquement lors du démarrage. Ce scripts crée deux base de donnée et deux utilisateurs admins sur ces bases. Les bases et les utilisateurs sont utilisé par les dockers wordpress. 
@@ -41,9 +41,6 @@ GRANT ALL PRIVILEGES ON wordpress.* TO 'your_user'@'%';
 - Accessible via le domaine `scem-eset.usmb-tri.fr`.
 - Port mappé : `8081` (local) vers `80` (conteneur).
 
-Les deux services WordPress attendent que la base de données MySQL soit prête grâce à la configuration `WAIT_HOSTS`.
-
-**Expliquer précisément le rôle des lignes** 
 
 ```
 labels:
@@ -54,7 +51,7 @@ traefik.http.routers.wordpress1.rule=Host('claudel-tri.usmb-tri.fr')
 Spécifie que le service wordpress1 répond aux requêtes pour le domaine claudel-tri.usmb-tri.fr.
 
 traefik.http.services.wordpress1.loadbalancer.server.port=80 
-Indique que Traefik doit rediriger le trafic vers le port interne 80 du conteneur.
+Indique que Traefik doit rediriger le trafic vers le port interne 80 du conteneur. Le port 80 de nos conteneur est utilisé par Wordpress.
 
 
 ## 3.Configuration de Traefik 
@@ -62,7 +59,6 @@ Indique que Traefik doit rediriger le trafic vers le port interne 80 du conteneu
 ### Fonctionnement de Traefik
 Traefik est un reverse proxy qui gère automatiquement :
 - Le routage des requêtes vers les services (par exemple, WordPress).
-- La gestion des certificats SSL/TLS pour sécuriser les connexions HTTPS grâce à Let's Encrypt.
 
 Dans ce projet, Traefik est configuré pour :
 - Écouter sur les ports 80 (HTTP) 
