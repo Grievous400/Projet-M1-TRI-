@@ -106,7 +106,6 @@ Pour éviter de dépasser les limites de requêtes de Let's Encrypt pendant les 
 
 **`--certificatesresolvers.myresolver.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory`**
 
-**Quel est le nombre de requêtes max ??? Est-ce que l'utilisation de staging est ok en prod ?** 
 
 Il ne faut pas utiliser l'adresse du serveur de staging en production car ce sont des certificats non-signé. Pour une infrasturcture de production, il faut utiliser cette adresse : https://acme-v02.api.letsencrypt.org/directory
 Le nombre de requêtes max dépend du type de certificat demandé. Pour plus d'information, il faut regardé sur la doc officielle https://letsencrypt.org/docs/rate-limits/. 
