@@ -1,5 +1,23 @@
 ## Historique
 
+### *28/11/2024*
+Installation du docker compose Chirpstack.
+
+Configuration de la Gateway LoRaWan sur le serveur.
+
+Configuration des 2 capteurs de températures LHT65 sur le serveur.
+
+Problème d'affichages des 'Event' et 'LoRaWan Frames' sur le site web depuis l'université. Il faut mettre sur l'antivirus F-Secure Client l'analyse du trafic web & AMSI en OFF.
+
+### *27/11/2024*
+Approfondissement du cours LoRaWan.
+
+Récupération des 2 sondes de températures LHT65.
+
+Apprentissage sur le fonctionnement de celles-ci.
+
+Mail envoyé au professeur pour savoir l'adresse IP de la Gateway LoRaWan
+
 ### *21/11/2024*
 Commencement du cours sur le LoRaWaN et modifications des dockers compose.
 
