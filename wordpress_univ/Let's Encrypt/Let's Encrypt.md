@@ -53,6 +53,7 @@ Le nombre de requêtes max dépend du type de certificat demandé. Pour plus d'i
 Pour voir si nos certificats sont bien généré, on peut aller voir les certificats directement depuis notre navigateurs avec l'adresse en https https://claudel-tri.usmb-tri.fr/ 
 
 Dans notre cas, le certificat apparait non valide car il n'est pas signé. Cela vient du fait qu'on utilise le staging server. Nous pouvons voir les différents éléments de notre certificat.
+
 ![image](https://github.com/user-attachments/assets/22aed5f8-97ea-4bcd-8664-44e95cf1ab9f)
 
 
