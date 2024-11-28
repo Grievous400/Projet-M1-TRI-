@@ -17,9 +17,7 @@ services:
       - "8080:80"
     environment:
       WAIT_HOSTS: db:3306
-      WAIT_HOSTS_TIMEOUT: 30
-      WAIT_SLEEP_INTERVAL: 10
-      WAIT_HOST_CONNECT_TIMEOUT: 30
+
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: your_user
       WORDPRESS_DB_PASSWORD: your_password
@@ -39,18 +37,15 @@ services:
       - "8081:80"
     environment:
       WAIT_HOSTS: db:3306
-      WAIT_HOSTS_TIMEOUT: 30
-      WAIT_SLEEP_INTERVAL: 10
-      WAIT_HOST_CONNECT_TIMEOUT: 30
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: your_user2
       WORDPRESS_DB_PASSWORD: your_password2
       WORDPRESS_DB_NAME: wordpress2
     labels:
-      - "traefik.http.routers.wordpress1.rule=Host(`durand-tri.usmb-tri.fr`)"
-      - "traefik.http.services.wordpress1.loadbalancer.server.port=80"
-      - "traefik.http.routers.wordpress1.entrypoints=web,websecure"
-      - "traefik.http.routers.wordpress1.tls.certresolver=myresolver"
+      - "traefik.http.routers.wordpress2.rule=Host(`durand-tri.usmb-tri.fr`)"
+      - "traefik.http.services.wordpress2.loadbalancer.server.port=80"
+      - "traefik.http.routers.wordpress2.entrypoints=web,websecure"
+      - "traefik.http.routers.wordpress2.tls.certresolver=myresolver"
 
   reverse-proxy:
     # The official v3 Traefik docker image
@@ -70,7 +65,6 @@ services:
       # The HTTP port
       - "80:80"
       - "443:443"
-
       # The Web UI (enabled by --api.insecure=true)
       - "8085:8080"
     volumes:
