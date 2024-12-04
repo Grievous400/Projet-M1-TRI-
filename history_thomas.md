@@ -1,5 +1,12 @@
 ## Historique
 
+### *04/12/2024*
+Création documents pour la soutenance orale.
+
+Mise à jour du planning avec les hommes/jours.
+
+Création du powerpoint pour la soutenance.
+
 ### *28/11/2024*
 Installation du docker compose Chirpstack.
 
