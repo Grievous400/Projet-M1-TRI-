@@ -54,7 +54,7 @@ traefik.http.services.wordpress1.loadbalancer.server.port=80
 Indique que Traefik doit rediriger le trafic vers le port interne 80 du conteneur. Le port 80 de nos conteneur est utilisé par Wordpress.
 
 
-## 3.Configuration de Traefik 
+### 2.Configuration de Traefik 
 
 ### Fonctionnement de Traefik
 Traefik est un reverse proxy qui gère automatiquement :
