@@ -1,0 +1,4 @@
+# N'ajoute pas dans le git les fichiers définis ici
+# Ajout du fichier contenant les variables d'environnement
+# Lorsqu'il est exécuté sans indicateur --env-file explicite, Docker Compose recherche un fichier *.env* dans votre répertoire de travail
+.env
