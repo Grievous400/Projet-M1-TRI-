@@ -30,4 +30,6 @@ Cette commande permet de faire une entrée "nom de l'entrée" avec comme valeur 
 ``` get "nom de l'entrée" ```
 
 ## Pour plus d'information sur le fonctionnement de la base redis :
-https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/redis-tutoriel/
+
+[Lien vers le site de Ionos](https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/redis-tutoriel/])
+
