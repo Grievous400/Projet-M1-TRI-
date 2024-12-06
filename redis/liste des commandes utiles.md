@@ -12,3 +12,17 @@ config get *
 Cette commande sert à configurer les paramètres de la base :
 
 config set paramètre "votre valeur"
+
+Cette commande sert à sauvegarder l'état de la bdd :
+
+save 60 10
+Tous les 60 secondes, si 10 changements ont été détectés, la base de données est sauvegardée.
+Pour faire cette action en bachground, on peut utiliser la commande bgsave
+
+Commande pour ajouter des entrées : 
+
+Cette commande permet de faire une entrée "nom de l'entrée" avec comme valeur "valeur de l'entrée"
+
+set "nom de l'entrée" "valeur de l'entrée" 
+
+get "nom de l'entrée"
