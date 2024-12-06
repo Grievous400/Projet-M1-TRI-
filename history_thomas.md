@@ -1,5 +1,14 @@
 ## Historique
 
+### *05/12/2024*
+Modification Powerpoint Soutenance
+
+Oral avec M. Flechet
+
+Prise de notes des modifications à faire sur les documents
+
+Montée en compétences sur Redis
+
 ### *04/12/2024*
 Création documents pour la soutenance orale.
 
