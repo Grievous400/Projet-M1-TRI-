@@ -31,5 +31,5 @@ Cette commande permet de faire une entrée "nom de l'entrée" avec comme valeur 
 
 ## Pour plus d'information sur le fonctionnement de la base redis :
 
-[Lien vers le site de Ionos](https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/redis-tutoriel/])
+[Lien vers le site de Ionos](https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/redis-tutoriel/)
 
