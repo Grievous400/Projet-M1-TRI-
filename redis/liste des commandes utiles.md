@@ -4,6 +4,10 @@ Redis service de base de donnée NOSQL. C'est un système de clé/valeur. Tous e
 
 ``` redis-cli -h adresse_IP_distant -p 6379 -a ton_mot_de_passe ```
 
+## Commande pour se connecter à un docker redis : 
+
+``` docker exec -it ID redis-cli```
+
 ## Commande pour configurer la base redis :
 
 Cette commande renvoye toute la configuraton de notre base redis :
