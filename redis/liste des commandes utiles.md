@@ -51,8 +51,12 @@ Attention cette commande change en fonction des types de clées. Dans notre cas 
 
 ```HGETALL key_name```
 
+## Utilisation de la base redis par Chirpstack :
+
+Chirspstack utilise redis pour stocker des donnés temporaires qui sont nécessaire à son fonctionnement. On retrouvve par exemple des informations sur la Gateway Lorawan. On retrouve les métrics exit
 
 
+![image](https://github.com/user-attachments/assets/b4bf7963-df89-4668-890b-bdf0b75092a9)
 
 
 ## Pour plus d'information sur le fonctionnement de la base redis :
