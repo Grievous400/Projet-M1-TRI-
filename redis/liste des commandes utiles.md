@@ -33,6 +33,28 @@ Cette commande permet de faire une entrée "nom de l'entrée" avec comme valeur 
 
 ``` get "nom de l'entrée" ```
 
+
+## Commande pour voir les informations stockées:
+
+Comme dit plus haut, redis utilise un système de clé valeur donc pour voir les données. Donc pour voir les données stockées, il faut regarder les clées.
+
+Commande pour voir les clées :
+
+```KEYS *```
+Commande pour voir les types des clées :
+
+```TYPE key_name```
+
+Commande pour voir la valeur des clées :
+
+Attention cette commande change en fonction des types de clées. Dans notre cas avec chirpstack, les clées ont comme valeur Hash. Donc on utilise la commande suivante :
+
+```HGETALL key_name```
+
+
+
+
+
 ## Pour plus d'information sur le fonctionnement de la base redis :
 
 [Lien vers le site de Ionos](https://www.ionos.fr/digitalguide/hebergement/aspects-techniques/redis-tutoriel/)
