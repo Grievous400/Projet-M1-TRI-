@@ -3,6 +3,8 @@
 ### *12/12/2024*
 Création d'un script pour récuperer les deux BDD.
 
+Rajout de détails sur les scripts pour afficher un message en cas d'erreur.
+
 ### *11/12/2024*
 Changement du compose en volume bind mount (pour les conteneurs postgres et redis).
 
