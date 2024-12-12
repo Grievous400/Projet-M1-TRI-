@@ -11,3 +11,4 @@ fi
 
 # Récuperation de la base de données PostgreSQL vers dump.sql
 sudo docker exec -it chirpstack-postgres-1 pg_dumpall -c --no-password -h localhost -U postgres > dump.sql
+echo "Fichier dump.sql copié dans le dossier actuel."
