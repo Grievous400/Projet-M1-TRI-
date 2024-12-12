@@ -1,13 +1,23 @@
 ## Historique
 
+### *12/12/2024*
+Création d'un script pour récuperer les deux BDD.
+
+### *11/12/2024*
+Changement du compose en volume bind mount (pour les conteneurs postgres et redis).
+
+Relancement du conteneur dans ces conditions (re-enregistrement de la gateway et des deux capteurs de température) pour pouvoir plus facilement récuperer les backups des BDD.
+
+Création d'un script pour restaurer les deux BDD.
+
 ### *05/12/2024*
-Modification Powerpoint Soutenance
+Modification Powerpoint Soutenance.
 
-Oral avec M. Flechet
+Oral avec M. Flechet.
 
-Prise de notes des modifications à faire sur les documents
+Prise de notes des modifications à faire sur les documents.
 
-Montée en compétences sur Redis
+Montée en compétences sur Redis.
 
 ### *04/12/2024*
 Création documents pour la soutenance orale.
