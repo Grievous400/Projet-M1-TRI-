@@ -4,6 +4,10 @@
 
 Clone modifié du repo [chirpstack-docker](https://github.com/chirpstack/chirpstack-docker)
 
+## Actions à faire
+
+Les scripts (backup & restore) doivent être lancé en sudo.
+
 ## Problème connu
 
 Depuis l'université, l'antivirus bloque l'affichage des 'Events' ou 'LoRaWan trames'.
