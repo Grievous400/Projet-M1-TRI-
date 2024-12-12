@@ -6,7 +6,7 @@ Clone modifié du repo [chirpstack-docker](https://github.com/chirpstack/chirpst
 
 ## Actions à faire
 
-Les scripts (backup & restore) doivent être lancés en sudo.
+Les scripts (backup & restore) doivent être lancés en <ins>sudo</ins>.
 
 ## Problème connu
 
