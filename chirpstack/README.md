@@ -4,9 +4,13 @@
 
 Clone modifié du repo [chirpstack-docker](https://github.com/chirpstack/chirpstack-docker).
 
+## Modifications du repo
+
+Changement des volumes **postgres** et **redis** en bind mount.
+
 ## Actions à faire
 
-Les scripts [script_backup](https://github.com/Grievous400/Projet-M1-TRI/blob/thomas/chirpstack/script_backup.sh) et [script_restore](https://github.com/Grievous400/Projet-M1-TRI/blob/thomas/chirpstack/script_restore.sh) doivent être lancés en <ins>sudo</ins>.
+Les scripts [script_backup](https://github.com/Grievous400/Projet-M1-TRI/blob/thomas/chirpstack/script_backup.sh) et [script_restore](https://github.com/Grievous400/Projet-M1-TRI/blob/thomas/chirpstack/script_restore.sh) doivent être lancés en <ins>**sudo**</ins>.
 
 ## Problème connu
 
