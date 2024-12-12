@@ -11,4 +11,5 @@ Les scripts (backup & restore) doivent être lancés en sudo.
 ## Problème connu
 
 Depuis l'université, l'antivirus bloque l'affichage des 'Events' ou 'LoRaWan trames'.
+
 Il faut donc penser a désactivé "l'analyse du trafic web" et "l'AMSI" (mise en OFF).
