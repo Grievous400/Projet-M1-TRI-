@@ -1,5 +1,15 @@
 ## Historique
 
+### *19/12/2024*
+Modification Github, merge dans la branche main pour éviter les duplications de partout
+
+Montée en compétences sur Synology NAS, OpenVPN
+
+### *18/12/2024*
+Mise à jour des documents pour la soutenance orale (classeur hommes/jour et présentation powerpoint)
+
+Modification script et essai complet sur le serveur chirpstack
+
 ### *12/12/2024*
 Création d'un script pour récuperer les deux BDD.
 
