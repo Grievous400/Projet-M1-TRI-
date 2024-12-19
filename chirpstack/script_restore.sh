@@ -21,7 +21,7 @@ if [ -f dump.sql ]; then
     docker compose exec -T postgres psql -h localhost -U postgres < dump.sql
     # Arrête le Docker Compose
     docker compose down
-    # Relance le Docker Compose en mode détaché avec tout les services
+    # Relance le Docker Compose avec tout les services
     docker compose up -d
 else
     echo "Erreur : Le fichier dump.sql n'existe pas."
