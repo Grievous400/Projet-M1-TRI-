@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Créer les répertoires redisdata et postgresqldata
+# Crée les répertoires redisdata et postgresqldata
 mkdir -p redisdata postgresqldata
 
-# Copier les fichiers dans les répertoires respectifs
+# Copie le fichier dump.rdb (Redis) dans son répertoire
 if [ -f dump.rdb ]; then
     cp dump.rdb redisdata/
     echo "Fichier dump.rdb copié dans le dossier redisdata."
@@ -12,16 +12,16 @@ else
     exit 1
 fi
 
-# Vérification de la présence du fichier dump.sql
+# Vérification de la présence du fichier dump.sql (PostgreSQL)
 if [ -f dump.sql ]; then
-    # Lancer Docker Compose pour le service postgres
+    # Lance le Docker Compose uniquement pour le service postgres
     docker compose up postgres -d --wait
     sleep 5
-    # Restaurer la base de données PostgreSQL depuis le fichier de sauvegarde
+    # Restaure la base de données PostgreSQL depuis le dump.sql
     docker compose exec -T postgres psql -h localhost -U postgres < dump.sql
-    # Arrêter Docker Compose
+    # Arrête le Docker Compose
     docker compose down
-    # Relancer Docker Compose en mode détaché
+    # Relance le Docker Compose en mode détaché avec tout les services
     docker compose up -d
 else
     echo "Erreur : Le fichier dump.sql n'existe pas."
