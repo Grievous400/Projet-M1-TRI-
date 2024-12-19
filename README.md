@@ -1,1 +1,1 @@
-[Historique](./history_thomas.md)
+[Historique personnel](./history_thomas.md)
