@@ -56,7 +56,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./configuration/postgresql/initdb:/docker-entrypoint-initdb.d
-      - postgresqldata:/var/lib/postgresql/data
+      - ./postgresqldata:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=root
 
@@ -65,7 +65,7 @@ services:
     restart: unless-stopped
     command: redis-server --save 300 1 --save 60 100 --appendonly no
     volumes:
-      - redisdata:/data
+      - ./redisdata:/data
 
   mosquitto:
     image: eclipse-mosquitto:2
