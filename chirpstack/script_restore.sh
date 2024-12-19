@@ -12,6 +12,7 @@ else
     exit 1
 fi
 
+# Vérification de la présence du fichier dump.sql
 if [ -f dump.sql ]; then
     # Lancer Docker Compose pour le service postgres
     docker compose up postgres -d --wait
