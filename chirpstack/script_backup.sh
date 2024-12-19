@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copier le fichier dump.rdb de Redis
+# Copie le fichier dump.rdb de Redis
 if [ -f redisdata/dump.rdb ]; then
     cp redisdata/dump.rdb dump.rdb
     echo "Fichier dump.rdb copié dans le dossier actuel."
