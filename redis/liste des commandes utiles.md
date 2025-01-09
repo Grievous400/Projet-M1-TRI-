@@ -58,6 +58,29 @@ Chirspstack utilise redis pour stocker des donnés temporaires qui sont nécessa
 
 ![image](https://github.com/user-attachments/assets/b4bf7963-df89-4668-890b-bdf0b75092a9)
 
+## Utiliser Redis Insight :
+
+Il existe un logiciel disponible sur plusieurs formats comme docker, desktop et kubernetes.
+
+Voici le lien de la documentation avec tous les liens de téléchargements :
+https://redis.io/docs/latest/operate/redisinsight/install/install-on-desktop/
+
+Voici le lien pour le télécharger en version desktop :
+https://redis.io/insight/?utm_source=redisinsight&utm_medium=website&utm_campaign=install_redisinsight#insight-form
+
+Une fois l'application téléchargée, on la lance et nous allons ajouter notre base redis 
+![image](https://github.com/user-attachments/assets/36b8b531-9d13-48f6-94ad-5e8990bfd94e)
+
+On va ajouter notre base redis pour se faire on va appuyer sur ajouter une base 
+
+![image](https://github.com/user-attachments/assets/e1642b53-c069-4880-be3a-c74e52fb824d)
+
+Pour finir on test la connexion en appuyant sur "Test Connection"
+![image](https://github.com/user-attachments/assets/0e775846-661c-4cd0-b165-0c3bcc1628f9)
+
+En cliquant sur notre base ajoutée, on peut voir toutes les clés de cette dernière
+![image](https://github.com/user-attachments/assets/38e802e7-422b-464a-84f7-012e2eba4d95)
+
 
 ## Pour plus d'information sur le fonctionnement de la base redis :
 
