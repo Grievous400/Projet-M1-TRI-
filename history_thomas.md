@@ -6,6 +6,9 @@ Installation et configuration du VPN (OpenVPN) sur le serveur Chirpstack
 Procédure d'installation du VPN sur GitHub
 
 Test de backup avec SCP, RSYNC
+```
+sudo rsync -v -e ssh /home/almalinux/thomas/chirpstack/dump.rdb projetm1-24@10.8.0.6:/volume1/chirpstack/Sauvegardes
+```
 
 Création compte Synology
 
