@@ -10,7 +10,7 @@ Changement des volumes **postgres** et **redis** en bind mount.
 
 ## Actions à faire
 
-L'installation du [vpn](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/vpn.md) sur le serveur Chirpstack.
+L'installation d'[OpenVPN](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/vpn.md) sur le serveur Chirpstack.
 
 Le paramétrage du [Synology](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology.md) pour mettre en place le VPN et Active Backup.
 
