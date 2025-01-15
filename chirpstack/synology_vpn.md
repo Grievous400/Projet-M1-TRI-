@@ -1,4 +1,4 @@
-# Installation du VPN
+# Configuration du VPN sur Synology
 
 Une fois le fichier .opvn prêt (voir étape [OpenVPN](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/vpn.md)), on vas l'utiliser pour mettre en place la liaison VPN.
 
