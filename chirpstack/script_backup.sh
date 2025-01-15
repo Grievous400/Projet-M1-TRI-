@@ -1,9 +1,15 @@
 #!/bin/bash
 
+# Ajoute le chemin complet pour les commandes
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Défini une variable pour le chemin d'acces au serveur
+SERVER_DIR="/home/almalinux/thomas/chirpstack"
+
 # Vérifie si le dossier "sauvegardes" existe
-if [ ! -d "sauvegardes" ]; then
+if [ ! -d "$SERVER_DIR/sauvegardes" ]; then
     # Si le dossier n'existe pas, le créer
-    mkdir sauvegardes
+    mkdir "$SERVER_DIR/sauvegardes"
     echo "Le dossier 'sauvegardes' a été créé."
 else
     # Si le dossier existe déjà, ne rien faire
@@ -11,18 +17,18 @@ else
 fi
 
 # Copie le fichier dump.rdb de Redis
-if [ -f redisdata/dump.rdb ]; then
-    cp redisdata/dump.rdb sauvegardes/dump.rdb
+if [ -f "$SERVER_DIR/redisdata/dump.rdb" ]; then
+    cp "$SERVER_DIR/redisdata/dump.rdb" "$SERVER_DIR/sauvegardes/dump.rdb"
     echo "Fichier dump.rdb copié dans le dossier actuel."
-    #Permet au synology de copier le fichier (par défaut : 600 root)
-    chmod 644 sauvegardes/dump.rdb
+    # Permet au Synology de copier le fichier (par défaut : 600 root)
+    chmod 644 "$SERVER_DIR/sauvegardes/dump.rdb"
 else
     echo "Erreur : Le fichier dump.rdb n'existe pas."
     exit 1
 fi
 
-# Récuperation de la base de données Postgres vers dump.sql
-docker exec -it chirpstack-postgres-1 pg_dumpall -c --no-password -h localhost -U postgres > sauvegardes/dump.sql
+# Récupération de la base de données Postgres vers dump.sql
+/usr/bin/docker exec -it chirpstack-postgres-1 /usr/bin/pg_dumpall -c --no-password -h localhost -U postgres > "$SERVER_DIR/sauvegardes/dump.sql"
 
 # Vérification du code de retour de la commande docker
 if [ $? -eq 0 ]; then
