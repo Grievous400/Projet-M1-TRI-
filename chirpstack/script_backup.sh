@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Vérifie si le dossier "sauvegardes" existe
+if [ ! -d "sauvegardes" ]; then
+    # Si le dossier n'existe pas, le créer
+    mkdir sauvegardes
+    echo "Le dossier 'sauvegardes' a été créé."
+else
+    # Si le dossier existe déjà, ne rien faire
+    echo "Le dossier 'sauvegardes' existe déjà."
+fi
+
 # Copie le fichier dump.rdb de Redis
 if [ -f redisdata/dump.rdb ]; then
     cp redisdata/dump.rdb dump.rdb
