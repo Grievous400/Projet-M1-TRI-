@@ -15,3 +15,8 @@ Enfin, sous cron, rajouter la ligne suivante et quitter. Elle permet de lancer l
 ```
 */15 * * * * /home/almalinux/thomas/chirpstack/script_backup.sh
 ```
+
+Pour être certain que la commande a bien été prise en compte, on peut se servir de la commande suivante pour voir les tâches paramétrer.
+```
+crontab -l
+```
