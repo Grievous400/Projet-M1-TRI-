@@ -1,5 +1,10 @@
 ## Historique
 
+### *S3 13 au 19 janvier*
+Prise de screenshots et construction de la documentation au sujet des différentes tâches éffectués la semaine dernière et aujourd'hui (installation vpn, configuration vpn, configuration active backup, configuration cron)
+
+Modification du script de backup pour qu'il fonctionne avec cron (passage en lien absolu avec variable + ajout variable environnement)
+
 ### *S2 06 au 12 janvier*
 Installation et configuration du VPN (OpenVPN) sur le serveur Chirpstack
 
