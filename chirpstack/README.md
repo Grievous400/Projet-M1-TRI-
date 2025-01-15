@@ -12,7 +12,7 @@ Changement des volumes **postgres** et **redis** en bind mount.
 
 L'installation d'[OpenVPN](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/vpn.md) sur le serveur Chirpstack.
 
-Le paramétrage du Synology pour mettre en place le [VPN](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology_vpn.md) et Active Backup.
+Le paramétrage du Synology pour mettre en place le [VPN](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology_vpn.md) et [Active Backup](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology_activebackup.md).
 
 Les scripts [script_backup](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/script_backup.sh) et [script_restore](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/script_restore.sh) doivent être lancés en <ins>**sudo**</ins> et dans le dossier du docker compose.
 
