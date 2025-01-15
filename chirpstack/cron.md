@@ -2,7 +2,7 @@
 
 Afin d'automatiser les sauvegardes, nous allons utiliser cron sur le serveur linux.
 
-Tout d'abord, nous allons passer en root, lancer cron et faire en sorte qu'il se lance aussi au démarrage du serveur.
+Tout d'abord, nous allons passer en root (vu que le script doit être lancé en sudo), lancer cron et faire en sorte qu'il se lance aussi au démarrage du serveur.
 
 ```
 sudo -i
