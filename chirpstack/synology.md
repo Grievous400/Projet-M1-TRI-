@@ -20,4 +20,4 @@ Cocher uniquement la case <ins>Reconnecter quand la connexion VPN est perdue</in
 Revenir dans <ins>Réseau/Interface réseau</ins>, cliquer sur la liaison VPN puis <ins>Connecter</ins>.
 ![image](https://github.com/user-attachments/assets/4f7e0337-420e-48b4-82f7-db957f4eee92)
 
-Elle devra apparaître comme active avec une adresse IP attribuée.
+Elle doit apparaître comme active avec une adresse IP qui lui est attribuée.
