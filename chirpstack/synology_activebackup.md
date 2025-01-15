@@ -30,5 +30,5 @@ Puis ne garder que les paramètres présent sur l'image ci-dessous.
 Enfin cliquer sur <ins>Effectué</ins> pour lancer l'automatisation de la tâche.
 ![image](https://github.com/user-attachments/assets/fe84cb6e-7e24-4176-9a17-074fb79fda19)
 
-Il reste plus qu'à valider la sauvegarde de la tâche et c'est fini.
+Il reste plus qu'à valider la sauvegarde en cliquant sur <ins>Oui</ins> et la tâche est valide puis elle se lancera à l'heure définie juste avant.
 ![image](https://github.com/user-attachments/assets/3d30a00b-6097-4833-9109-c0d28fe2c985)
