@@ -12,6 +12,8 @@ Changement des volumes **postgres** et **redis** en bind mount.
 
 L'installation du [vpn](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/vpn.md) sur le serveur Chirpstack.
 
+Le paramétrage du [Synology](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology.md) pour mettre en place le VPN et Active Backup.
+
 Les scripts [script_backup](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/script_backup.sh) et [script_restore](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/script_restore.sh) doivent être lancés en <ins>**sudo**</ins> et dans le dossier du docker compose.
 
 ## Problème connu
