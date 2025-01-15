@@ -17,7 +17,7 @@ Remplir les cases <ins>nom du profil</ins>, <ins>nom d'utilisateur</ins> et <ins
 Cocher uniquement la case <ins>Reconnecter quand la connexion VPN est perdue</ins> puis cliquer sur <ins>Effectué</ins>.
 ![image](https://github.com/user-attachments/assets/863f1d5a-e930-44d5-8d9f-54f4acfbb41d)
 
-Revenir dans Réseau/Interface réseau, cliquer sur la liaison VPN puis <ins>Connecter</ins>.
+Revenir dans <ins>Réseau/Interface réseau</ins>, cliquer sur la liaison VPN puis <ins>Connecter</ins>.
 ![image](https://github.com/user-attachments/assets/4f7e0337-420e-48b4-82f7-db957f4eee92)
 
 Elle devra apparaître comme active avec une adresse IP attribuée.
