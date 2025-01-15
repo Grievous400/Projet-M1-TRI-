@@ -69,7 +69,7 @@ cd /etc/openvpn/client
 nano client.ovpn
 ```
 
-Modifier la valeur de <ins>l'adresse ip</ins> ou le <ins>nom de domaine</ins> et supprimer la ligne <ins>ta.key</ins>
+Modifier la valeur de <ins>l'adresse ip</ins> ou le <ins>nom de domaine</ins> (ligne 'remote') et supprimer la ligne <ins>ta.key</ins>
 
 <ins>Copie les fichiers nécessaire au fichier .opvn pour le client</ins>
 ```
