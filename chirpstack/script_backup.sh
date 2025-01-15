@@ -27,8 +27,11 @@ else
     exit 1
 fi
 
+# Changement de dossier pour celui du docker compose afin d'executer la commande docker
+cd /home/almalinux/thomas/chirpstack || exit 1
+
 # Récupération de la base de données Postgres vers dump.sql
-/usr/bin/docker exec -it chirpstack-postgres-1 /usr/bin/pg_dumpall -c --no-password -h localhost -U postgres > "$SERVER_DIR/sauvegardes/dump.sql"
+/usr/bin/docker exec chirpstack-postgres-1 pg_dumpall -c --no-password -h localhost -U postgres > "$SERVER_DIR/sauvegardes/dump.sql"
 
 # Vérification du code de retour de la commande docker
 if [ $? -eq 0 ]; then
