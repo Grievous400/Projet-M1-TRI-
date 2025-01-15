@@ -32,3 +32,8 @@ Enfin cliquer sur <ins>Effectué</ins> pour lancer l'automatisation de la tâche
 
 Il reste plus qu'à valider la sauvegarde en cliquant sur <ins>Oui</ins> et la tâche se lancera à l'heure définie précédemment.
 ![image](https://github.com/user-attachments/assets/3d30a00b-6097-4833-9109-c0d28fe2c985)
+
+On doit s'aperçevoir du bon fonctionnement avec la validation de la première sauvegarde.
+![image](https://github.com/user-attachments/assets/0cf408ef-bd74-4e07-9c67-6243a811dff3)
+![image](https://github.com/user-attachments/assets/a76b96dc-64e6-4c1f-bd88-2a42e29afefc)
+
