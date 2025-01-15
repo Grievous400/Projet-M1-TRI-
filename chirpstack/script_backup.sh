@@ -4,7 +4,7 @@
 if [ -f redisdata/dump.rdb ]; then
     cp redisdata/dump.rdb dump.rdb
     echo "Fichier dump.rdb copié dans le dossier actuel."
-    #Permet au synology de copier le fichier (de base 600 pour root)
+    #Permet au synology de copier le fichier (par défaut : 600 root)
     chmod 644 dump.rdb
 else
     echo "Erreur : Le fichier dump.rdb n'existe pas."
