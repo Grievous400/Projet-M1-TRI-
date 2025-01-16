@@ -29,7 +29,7 @@ cp /etc/openvpn/easy-rsa/pki/dh.pem /etc/openvpn/server
 cp /etc/openvpn/easy-rsa/pki/ca.crt /etc/openvpn/server
 ```
 
-<ins>Ouverture du port pour la mise en place du VPN ainsi que l'activation du routage IPv4</ins>
+<ins>Ouverture du port sur le firewall pour la mise en place du VPN</ins>
 ```
 firewall-cmd --add-port=1194/udp --permanent
 firewall-cmd --permanent --add-service=openvpn
