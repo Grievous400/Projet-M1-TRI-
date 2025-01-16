@@ -35,6 +35,7 @@ firewall-cmd --permanent --new-zone=vpn
 firewall-cmd --permanent --zone=vpn --add-source=193.48.120.0/20
 firewall-cmd --permanent --zone=vpn --add-source=193.48.128.0/21
 firewall-cmd --permanent --zone=vpn --add-port=1194/udp
+firewall-cmd --permanent --zone=vpn --add-port=22/tcp
 firewall-cmd --reload
 ```
 
