@@ -29,7 +29,7 @@ cp /etc/openvpn/easy-rsa/pki/dh.pem /etc/openvpn/server
 cp /etc/openvpn/easy-rsa/pki/ca.crt /etc/openvpn/server
 ```
 
-<ins>Ouverture du port sur le firewall pour la mise en place du VPN</ins>
+<ins>Ouverture de ports sur le firewall pour la mise en place du VPN</ins>
 ```
 firewall-cmd --permanent --new-zone=vpn
 firewall-cmd --permanent --zone=vpn --add-source=193.48.120.0/20
