@@ -1,4 +1,10 @@
 # Installation d'OpenVPN sur le Serveur
+
+<ins>(Optionnel) Mise à l'heure du serveur</ins>
+```
+timedatectl set-timezone Europe/Paris
+```
+
 <ins>Installation des services</ins>
 ```
 yum update
