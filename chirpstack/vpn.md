@@ -36,8 +36,6 @@ firewall-cmd --permanent --add-service=openvpn
 firewall-cmd --permanent --zone=trusted --add-service=openvpn
 firewall-cmd --permanent --zone=trusted --add-interface=tun0
 firewall-cmd --reload
-sysctl -w net.ipv4.ip_forward=1
-sysctl -p
 ```
 
 <ins>Copie et modification de la configuration du serveur OpenVPN</ins>
