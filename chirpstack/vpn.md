@@ -31,11 +31,11 @@ cp /etc/openvpn/easy-rsa/pki/ca.crt /etc/openvpn/server
 
 <ins>Ouverture de ports sur le firewall pour la mise en place du VPN</ins>
 ```
-firewall-cmd --permanent --new-zone=vpn
-firewall-cmd --permanent --zone=vpn --add-source=193.48.120.0/20
-firewall-cmd --permanent --zone=vpn --add-source=193.48.128.0/21
-firewall-cmd --permanent --zone=vpn --add-port=1194/udp
-firewall-cmd --permanent --zone=vpn --add-port=22/tcp
+firewall-cmd --permanent --new-zone=univ
+firewall-cmd --permanent --zone=univ --add-source=193.48.120.0/20
+firewall-cmd --permanent --zone=univ --add-source=193.48.128.0/21
+firewall-cmd --permanent --zone=univ --add-port=1194/udp
+firewall-cmd --permanent --zone=univ --add-port=22/tcp
 firewall-cmd --reload
 ```
 
