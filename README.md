@@ -3,6 +3,6 @@
 
 [Mise en place d'un serveur ChirpStack](./chirpstack)
 
-[Information sur les bases redis](./redis)
+[Information sur les bases redis et gRPC](./redis)
 
-[Tutoriel sur les gRPC](./gRPC)
+
