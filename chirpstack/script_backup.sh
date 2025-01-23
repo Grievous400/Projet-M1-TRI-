@@ -6,6 +6,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Défini une variable pour le chemin d'acces au serveur
 SERVER_DIR="/home/almalinux/thomas/chirpstack"
 
+# Défini une variable pour le chemin d'acces a la sauvegarde
 SAVE_DIR="/var/backup/chirpstack"
 
 # Vérifie si le dossier "sauvegardes" existe
