@@ -1,5 +1,10 @@
-# Configuration d'Active Backup sur Synology
+## Prélude
+Pour éviter d'utiliser une adresse IP pour le serveur, on peut lui attribuer un nom de domaine via le fichier "/etc/hosts" présent dans le Synology.
+```
+10.8.0.1  chirpstack.server
+```
 
+# Configuration d'Active Backup sur Synology
 Une fois Active Backup d'installé sur un NAS Synology, cliquer sur <ins>Serveur de fichiers</ins> puis <ins>Ajouter un serveur</ins>.
 ![image](https://github.com/user-attachments/assets/9ce729a9-1982-4137-a337-723c8c33a73e)
 
