@@ -1,5 +1,16 @@
 ## Historique
 
+### *S4 20 au 26 janvier*
+Modification power point présentation (suite mail de Bernard)
+
+Ajout dans le fichier /etc/hosts du Synology "10.8.0.1 chirpstack.server"
+
+Passage du synology en IP fixe (reprenant l'IP attribuée par le serveur DHCP)
+
+Modification des scripts de sauvegarde et de restauration (/var/backup)
+
+Modification endroit de la save (synology active backup)
+
 ### *S3 13 au 19 janvier*
 Prise de screenshots et construction de la documentation au sujet des différentes tâches éffectués la semaine dernière et aujourd'hui (installation vpn, configuration vpn, configuration active backup, configuration cron)
 
