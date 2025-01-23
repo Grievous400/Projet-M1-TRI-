@@ -4,7 +4,7 @@
 SERVER_DIR="/home/almalinux/thomas/chirpstack"
 
 # Défini une variable pour le chemin d'acces a la sauvegarde
-SAVE_DIR="/var/backup/chirpstack"
+SAVE_DIR="/var/backup"
 
 # Crée les répertoires redisdata et postgresqldata
 mkdir -p "$SERVER_DIR/redisdata" "$SERVER_DIR/postgresqldata"
