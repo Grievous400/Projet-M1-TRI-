@@ -7,7 +7,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 SERVER_DIR="/home/almalinux/thomas/chirpstack"
 
 # Défini une variable pour le chemin d'acces a la sauvegarde
-SAVE_DIR="/var/backup/chirpstack"
+SAVE_DIR="/var/backup"
 
 # Vérifie si le dossier "sauvegardes" existe
 if [ ! -d "$SAVE_DIR" ]; then
@@ -21,7 +21,7 @@ fi
 
 # Copie le fichier dump.rdb de Redis
 if [ -f "$SERVER_DIR/redisdata/dump.rdb" ]; then
-    cp "$SERVER_DIR/redisdata/dump.rdb" "$AVE_DIR/dump.rdb"
+    cp "$SERVER_DIR/redisdata/dump.rdb" "$SAVE_DIR"
     echo "Fichier dump.rdb copié dans le dossier actuel."
     # Permet au Synology de copier le fichier (par défaut : 600 root)
     chmod 644 "$SAVE_DIR/dump.rdb"
