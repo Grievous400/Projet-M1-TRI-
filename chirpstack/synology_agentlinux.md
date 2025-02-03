@@ -2,22 +2,22 @@
 
 <ins>Configuration requise</ins>
 ```
-    Prend en charge les versions de noyau entre 2.6 et 6.8
-    Prend en charge les versions 64 bits des distributions Linux suivantes :
-        CentOS : 7.8, 7.9, 8.1, 8.5
-        RHEL : 6.10, 7.8, 7.9, 8.1, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4
-        Ubuntu : 16.04, 18.04, 20.04, 22.04, 24.04
-        Fedora : 38, 39, 40
-        Debian : 10, 11, 12
-    Systèmes de fichiers pris en charge
-        ext2
-        ext3
-        ext4
-        XFS
-    Composants requis sur l'appareil Linux source
-        make version 4.1 ou supérieure
-        dkms version 2.2.0.3 ou supérieure
-        gcc version 4.8.2 ou supérieure
+Prend en charge les versions de noyau entre 2.6 et 6.8
+Prend en charge les versions 64 bits des distributions Linux suivantes :
+    CentOS : 7.8, 7.9, 8.1, 8.5
+    RHEL : 6.10, 7.8, 7.9, 8.1, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4
+    Ubuntu : 16.04, 18.04, 20.04, 22.04, 24.04
+    Fedora : 38, 39, 40
+    Debian : 10, 11, 12
+Systèmes de fichiers pris en charge
+    ext2
+    ext3
+    ext4
+    XFS
+Composants requis sur l'appareil Linux source
+    make version 4.1 ou supérieure
+    dkms version 2.2.0.3 ou supérieure
+    gcc version 4.8.2 ou supérieure
 ```
 
 <ins>Commandes a executer en sudo sur la machine Linux</ins>
