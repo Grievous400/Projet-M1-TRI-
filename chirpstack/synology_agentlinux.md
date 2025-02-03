@@ -41,3 +41,15 @@ Une fois que l'Agent est "**Successfully connected**", il est automatiquement aj
 
 Une tâche est automatiquement crée aussi, après il est possible d'en créer une autre ou de modifier celle déjà présente.
 ![image](https://github.com/user-attachments/assets/24207188-9604-4af7-965d-063b6e30c811)
+
+## (Optionnel) Commandes disponibles pour l'Agent 
+
+|**Commande**|*Description*|
+|-----:|:-----|
+|abb-cli -c|Se connecter à Synology NAS.|
+|abb-cli -r|Se reconnecter à Synology NAS ou modifier la connexion.|
+|abb-cli -l|Se déconnecter de Synology NAS. Vous devez avoir les privilèges des gestionnaires de paquets pour déconnecter l'appareil du serveur.|
+|abb-cli -s|Afficher le statut récent du service de sauvegarde et la connexion entre votre appareil et Synology NAS. Le lien vers Portail de récupération sera également disponible.|
+|abb-cli -h|Voir les options de contrôle disponibles.|
+|abb-cli -v|Vérifier la version actuelle de l'agent.|
+|abb-cli -q|Modifier les paramètres de notification pour n'envoyer que des notifications d'invite et d'erreur.|
