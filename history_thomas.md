@@ -1,5 +1,14 @@
 ## Historique
 
+### *S5 27 au 02 février*
+Modification du document de soutenance (suite à la préparation entretien)
+
+Test de l'agent Active Backup sur le serveur (Error car AlmaLinux trop récent)
+
+Test de l'agent Synology sur une machine moins récente (AlmaLinux =< 9.4)
+
+Construction de la documentation pour l'ajout d'une machine avec l'agent Synology Active Backup
+
 ### *S4 20 au 26 janvier*
 Modification power point présentation (suite mail de Bernard)
 
