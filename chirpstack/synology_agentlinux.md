@@ -16,7 +16,7 @@ abb-cli -c
 Il faut rentrer l'adresse du serveur, le username, le mot de passe et ainsi de suite.
 ![image](https://github.com/user-attachments/assets/a0adccd7-0dfa-418b-bdb1-4ca34f3b93ca)
 
-Une fois que l'Agent est "**Successfully connected**", il est automatiquement ajouté dans l'onglet "Serveur physique".
+Une fois que l'Agent est "**Successfully connected**", il est automatiquement ajouté dans l'onglet "*Serveur physique*".
 ![image](https://github.com/user-attachments/assets/2059ef92-01aa-4251-a442-6ee6fa544174)
 
 Une tâche est automatiquement crée aussi, après il est possible d'en créer une autre ou de modifier celle déjà présente.
