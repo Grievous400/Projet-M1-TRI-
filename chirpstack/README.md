@@ -18,6 +18,7 @@ L'installation d'[OpenVPN](https://github.com/Grievous400/Projet-M1-TRI/blob/mai
 
 Le paramétrage du Synology pour mettre en place le [VPN](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology_vpn.md) et [Active Backup](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology_activebackup.md).
 
+(Option : Le paramétrage de l'[Agent Linux Active Backup](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology_agentlinux.md) pour ajouter un Serveur Physique sous Linux)
 
 ## Problème connu
 
