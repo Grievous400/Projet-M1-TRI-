@@ -1,5 +1,12 @@
 ## Historique
 
+### *S6 03 au 09 février*
+Modification fichier .ovpn avec le nouveau nom de domaine (preprod2)
+
+Réflexion sur la réutilisation de l'image du disque (sda)
+
+Changement du fichier .img vers .vdi et .vmdk mais erreur ensuite sur l'initialisation de la VM (Linux ne retrouve pas ses volumes logiques)
+
 ### *S5 27 au 02 février*
 Modification du document de soutenance (suite à la préparation entretien)
 
