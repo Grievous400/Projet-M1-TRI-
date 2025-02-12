@@ -106,9 +106,9 @@ cp /etc/openvpn/easy-rsa/pki/private/client1.key /etc/openvpn/client
 -----END PRIVATE KEY-----
 </key>
 
-#<tls-auth>
-#-----BEGIN OpenVPN Static key V1-----
+<tls-auth>
+-----BEGIN OpenVPN Static key V1-----
 # Contenu du fichier ta.key
-#-----END OpenVPN Static key V1-----
-#</tls-auth>
+-----END OpenVPN Static key V1-----
+</tls-auth>
 ```
