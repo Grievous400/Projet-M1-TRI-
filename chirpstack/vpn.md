@@ -5,9 +5,10 @@
 timedatectl set-timezone Europe/Paris
 ```
 
-<ins>Installation des services</ins>
+<ins>Installation des services (OpenVPN dispo sur les dépôts EPEL)</ins>
 ```
 yum update
+yum install epel-release
 yum install openvpn easy-rsa
 ```
 
