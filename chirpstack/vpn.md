@@ -84,6 +84,7 @@ nano client.ovpn
 cp /etc/openvpn/easy-rsa/pki/ca.crt /etc/openvpn/client
 cp /etc/openvpn/easy-rsa/pki/issued/client1.crt /etc/openvpn/client
 cp /etc/openvpn/easy-rsa/pki/private/client1.key /etc/openvpn/client
+cp /etc/openvpn/server/ta.key /etc/openvpn/client
 ```
 
 <ins>Modifier le <ins>client.opvn</ins> et insérer à la fin les différents fichiers dans leur emplacements respectifs</ins>
