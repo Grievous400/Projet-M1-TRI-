@@ -17,8 +17,7 @@ yum install openvpn easy-rsa
 cd /etc/openvpn/easy-rsa
 ./easyrsa init-pki
 ```
-
-Modifier les valeurs présentes (CN, O, OU..) dans le fichier "<ins>vars</ins>" pour la génération du certificat de la CA
+*Modifier les valeurs présentes (CN, O, OU..) dans le fichier "<ins>vars</ins>" pour la génération du certificat de la CA*
 
 <ins>Installation de la CA et génération de la clé/certificat pour le server ChirpStack</ins>
 ```
@@ -52,7 +51,7 @@ cp /usr/share/doc/openvpn/sample/sample-config-files/server.conf /etc/openvpn/se
 cd /etc/openvpn/server
 nano server.conf
 ```
-Modifier la valeur dh en <ins>dh.pem</ins>
+*Modifier la valeur dh en <ins>dh.pem</ins>*
 
 <ins>Ajout de la clé ta.key pour le TLS Auth</ins>
 ```
@@ -78,8 +77,7 @@ cp /usr/share/doc/openvpn/sample/sample-config-files/client.conf /etc/openvpn/cl
 cd /etc/openvpn/client
 nano client.ovpn
 ```
-
-Modifier la valeur de <ins>l'adresse ip</ins> ou le <ins>nom de domaine</ins> (ligne 'remote')</ins>
+*Modifier la valeur de <ins>l'adresse ip</ins> ou le <ins>nom de domaine</ins> (ligne 'remote')</ins>*
 
 <ins>Copie les fichiers nécessaire au fichier .opvn pour le client</ins>
 ```
@@ -88,7 +86,7 @@ cp /etc/openvpn/easy-rsa/pki/issued/client1.crt /etc/openvpn/client
 cp /etc/openvpn/easy-rsa/pki/private/client1.key /etc/openvpn/client
 ```
 
-Modifier le <ins>client.opvn</ins> et insérer à la fin les différents fichiers dans leur emplacements respectifs :
+<ins>Modifier le <ins>client.opvn</ins> et insérer à la fin les différents fichiers dans leur emplacements respectifs</ins>
 ```
 <ca>
 -----BEGIN CERTIFICATE-----
