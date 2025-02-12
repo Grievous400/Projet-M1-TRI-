@@ -52,8 +52,12 @@ cp /usr/share/doc/openvpn/sample/sample-config-files/server.conf /etc/openvpn/se
 cd /etc/openvpn/server
 nano server.conf
 ```
-
 Modifier la valeur dh en <ins>dh.pem</ins>
+
+<ins>Ajout de la clé ta.key pour le TLS Auth</ins>
+```
+openvpn --genkey tls-auth ta.key
+```
 
 <ins>Activation du Serveur OpenVPN et paramétrage pour qu'il se lance au démarrage du serveur</ins>
 ```
@@ -75,7 +79,7 @@ cd /etc/openvpn/client
 nano client.ovpn
 ```
 
-Modifier la valeur de <ins>l'adresse ip</ins> ou le <ins>nom de domaine</ins> (ligne 'remote') et supprimer la ligne <ins>ta.key</ins>
+Modifier la valeur de <ins>l'adresse ip</ins> ou le <ins>nom de domaine</ins> (ligne 'remote')</ins>
 
 <ins>Copie les fichiers nécessaire au fichier .opvn pour le client</ins>
 ```
@@ -106,7 +110,7 @@ Modifier le <ins>client.opvn</ins> et insérer à la fin les différents fichier
 
 #<tls-auth>
 #-----BEGIN OpenVPN Static key V1-----
-# Contenu du fichier ta.key (pas utilisé)
+# Contenu du fichier ta.key
 #-----END OpenVPN Static key V1-----
 #</tls-auth>
 ```
