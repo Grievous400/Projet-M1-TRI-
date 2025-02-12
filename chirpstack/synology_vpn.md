@@ -11,7 +11,7 @@ Puis sur <ins>Interface réseau</ins> puis <ins>Créer</ins> et <ins>Créer un p
 Selectionner <ins>OpenVPN (via l'importation d'un fichier .ovpn)</ins>.
 ![image](https://github.com/user-attachments/assets/ea88249f-37a8-4275-b857-f8cd9f12a0b9)
 
-Remplir les cases <ins>nom du profil</ins>, <ins>nom d'utilisateur</ins> et <ins>mot de passe</ins> (login serveur) et importer le fichier client.opvn précédemment crée.
+Remplir les cases <ins>nom du profil</ins>, <ins>nom d'utilisateur</ins> et <ins>mot de passe</ins> (login serveur) et importer le fichier *client.opvn* précédemment crée.
 ![image](https://github.com/user-attachments/assets/3c342d1c-1c3d-458f-a691-ae414ff3c77e)
 
 Cocher uniquement la case <ins>Reconnecter quand la connexion VPN est perdue</ins> puis cliquer sur <ins>Effectué</ins>.
