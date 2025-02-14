@@ -1,59 +1,66 @@
 ## Historique
 
+### *S7 10 au 16 février*
+Test Synology VMM sans lien direct avec Active Backup Echec. Pas possible d'utiliser les fichiers .img directement d'active backup vers VMM. Apparemment le lien entre les deux est interne à Syno.
+
+Test avec l'image ISO Synology Recovery Media OK. Difficilement automatisable car interface graphique mais restaure entièrement et correctement les disques durs.
+
+Documentation faite sur l'utilisation du Synology Recovery Media.
+
 ### *S6 03 au 09 février*
-Modification fichier .ovpn avec le nouveau nom de domaine (preprod2)
+Modification fichier .ovpn avec le nouveau nom de domaine (preprod2).
 
-Réflexion sur la réutilisation de l'image du disque (sda)
+Réflexion sur la réutilisation de l'image du disque (sda).
 
-Changement du fichier .img vers .vdi et .vmdk mais erreur ensuite sur l'initialisation de la VM (Linux ne retrouve pas ses volumes logiques)
+Changement du fichier .img vers .vdi et .vmdk mais erreur ensuite sur l'initialisation de la VM (Linux ne retrouve pas ses volumes logiques).
 
 ### *S5 27 au 02 février*
-Modification du document de soutenance (suite à la préparation entretien)
+Modification du document de soutenance (suite à la préparation entretien).
 
-Test de l'agent Active Backup sur le serveur (Error car AlmaLinux trop récent)
+Test de l'agent Active Backup sur le serveur (Error car AlmaLinux trop récent).
 
-Test de l'agent Synology sur une machine moins récente (AlmaLinux =< 9.4)
+Test de l'agent Synology sur une machine moins récente (AlmaLinux =< 9.4).
 
-Construction de la documentation pour l'ajout d'une machine avec l'agent Synology Active Backup
+Construction de la documentation pour l'ajout d'une machine avec l'agent Synology Active Backup.
 
 ### *S4 20 au 26 janvier*
-Modification power point présentation (suite mail de Bernard)
+Modification power point présentation (suite mail de Bernard).
 
-Ajout dans le fichier /etc/hosts du Synology "10.8.0.1 chirpstack.server"
+Ajout dans le fichier /etc/hosts du Synology "10.8.0.1 chirpstack.server".
 
-Passage du synology en IP fixe (reprenant l'IP attribuée par le serveur DHCP)
+Passage du synology en IP fixe (reprenant l'IP attribuée par le serveur DHCP).
 
-Modification des scripts de sauvegarde et de restauration (/var/backup)
+Modification des scripts de sauvegarde et de restauration (/var/backup).
 
-Modification endroit de la save (synology active backup)
+Modification endroit de la save (synology active backup).
 
 ### *S3 13 au 19 janvier*
-Prise de screenshots et construction de la documentation au sujet des différentes tâches éffectués la semaine dernière et aujourd'hui (installation vpn, configuration vpn, configuration active backup, configuration cron)
+Prise de screenshots et construction de la documentation au sujet des différentes tâches éffectués la semaine dernière et aujourd'hui (installation vpn, configuration vpn, configuration active backup, configuration cron).
 
-Modification du script de backup pour qu'il fonctionne avec cron (passage en lien absolu avec variable + ajout variable environnement)
+Modification du script de backup pour qu'il fonctionne avec cron (passage en lien absolu avec variable + ajout variable environnement).
 
 ### *S2 06 au 12 janvier*
-Installation et configuration du VPN (OpenVPN) sur le serveur Chirpstack
+Installation et configuration du VPN (OpenVPN) sur le serveur Chirpstack.
 
-Procédure d'installation du VPN sur GitHub
+Procédure d'installation du VPN sur GitHub.
 
-Test de backup avec SCP, RSYNC
+Test de backup avec SCP, RSYNC.
 ```
 sudo rsync -v -e ssh /home/almalinux/thomas/chirpstack/dump.rdb projetm1-24@10.8.0.6:/volume1/chirpstack/Sauvegardes
 ```
 
-Création compte Synology
+Création compte Synology.
 
-Mise en place d'Active Backup for Business sur le Synology en lien avec le serveur Chirpstack
+Mise en place d'Active Backup for Business sur le Synology en lien avec le serveur Chirpstack.
 
 ### *S51 16-22 décembre*
-Modification Github, merge dans la branche main pour éviter les duplications de partout
+Modification Github, merge dans la branche main pour éviter les duplications de partout.
 
-Montée en compétences sur Synology NAS, OpenVPN
+Montée en compétences sur Synology NAS, OpenVPN.
 
-Mise à jour des documents pour la soutenance orale (classeur hommes/jour et présentation powerpoint)
+Mise à jour des documents pour la soutenance orale (classeur hommes/jour et présentation powerpoint).
 
-Modification script et essai complet sur le serveur chirpstack
+Modification script et essai complet sur le serveur chirpstack.
 
 ### *S50 09-15 décembre*
 Création d'un script pour récuperer les deux BDD.
