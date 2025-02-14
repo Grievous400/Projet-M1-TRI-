@@ -20,6 +20,8 @@ Le paramétrage du Synology pour mettre en place le [VPN](https://github.com/Gri
 
 (Optionnel : Le paramétrage de l'[Agent Linux Active Backup](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology_agentlinux.md) pour ajouter un Serveur Physique sous Linux)
 
+(Optionnel : Le paramétrage pour créer une VM puis la restauration d'une backup d'un [Serveur Physique Active Backup avec le Recovery Media](https://github.com/Grievous400/Projet-M1-TRI/blob/main/chirpstack/synology_linuxrecovery.md).
+
 ## Problème connu
 
 Depuis l'université, l'antivirus bloque l'affichage des 'Events' ou 'LoRaWan trames'.
